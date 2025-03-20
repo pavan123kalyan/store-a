@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pavan123kalyan/store-a/static/css/main.d0ba6735.css",
+    "main.js": "/pavan123kalyan/store-a/static/js/main.b9ef6bc4.js",
+    "static/js/453.fee869f6.chunk.js": "/pavan123kalyan/store-a/static/js/453.fee869f6.chunk.js",
+    "static/media/logo.svg": "/pavan123kalyan/store-a/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/pavan123kalyan/store-a/index.html",
+    "main.d0ba6735.css.map": "/pavan123kalyan/store-a/static/css/main.d0ba6735.css.map",
+    "main.b9ef6bc4.js.map": "/pavan123kalyan/store-a/static/js/main.b9ef6bc4.js.map",
+    "453.fee869f6.chunk.js.map": "/pavan123kalyan/store-a/static/js/453.fee869f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0ba6735.css",
+    "static/js/main.b9ef6bc4.js"
+  ]
+}
