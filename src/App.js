@@ -1,20 +1,20 @@
-// import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Products from "./components/Products";
-import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
 import Login from "./components/Login";
-import Register from "./components/Register"; // ✅ Import Register
+import Register from "./components/Register";
+import Orders from "./components/Orders";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import {createContext,useState } from "react";
+import { createContext,useState } from "react";
 export const appContext = createContext();
 function App() {
-
-  const [users,setUsers] = useState([]);
-  const [user,setUser] = useState([]);
-  const [cart,setCart] = useState([]);
-
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState({});
+  const [cart,setCart] = useState({})
+  const [orders,setOrders] = useState([])
   const products = [
     { id: 1, name: "Product 1", price: 30 },
     { id: 2, name: "Product 2", price: 40 },
@@ -26,20 +26,20 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <appContext.Provider value={{users,setUsers,user,setUser,products,cart,setCart}}> 
-        <Header />
-        <Routes>
-          <Route index element={<Products />} />
-          <Route path="products" element={<Products />} />
-          <Route path="login" element={<Login />} />
-          <Route path="Cart" element={<Cart />} />
-          <Route path="register" element={<Register />} /> {/* ✅ Add this */}
-        </Routes>
-        <Footer />
+        <appContext.Provider value={{ users, setUsers, user, setUser,products,cart,setCart,orders,setOrders }}>
+          <Header />
+          <Routes>
+            <Route index element={<Products />}></Route>
+            <Route path="products" element={<Products />}></Route>
+            <Route path="cart" element={<Cart />}></Route>
+            <Route path="orders" element={<Orders />}></Route>
+            <Route path="register" element={<Register />} />
+            <Route path="login" element={<Login />}></Route>
+          </Routes>
+          <Footer />
         </appContext.Provider>
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;
